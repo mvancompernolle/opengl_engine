@@ -12,7 +12,7 @@
 
 class Box: public Entity{
 public:
-    Box(int w, int h);
+    Box(float w = 1.0, float h = 1.0);
     virtual ~Box();
 
     virtual void tick(float dt);

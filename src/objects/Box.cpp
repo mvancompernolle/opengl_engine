@@ -6,7 +6,7 @@
 
 #include "Box.h"
 
-Box::Box(int width, int height){
+Box::Box(float width, float height){
 
     // create box geometry
     Vertex vert;
@@ -20,7 +20,7 @@ Box::Box(int width, int height){
     geometry.push_back(vert);
     vert.pos = glm::vec3(width/2, height/2, 0);
     geometry.push_back(vert);
-    vert.pos = glm::vec3(-width/2, -height/2, 0);
+    vert.pos = glm::vec3(width/2, -height/2, 0);
     geometry.push_back(vert);
 
     glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * geometry.size(), geometry.data(), GL_STATIC_DRAW);
